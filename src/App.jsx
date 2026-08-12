@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [name, setName] = useState("");
+  const [name, setName] = useState("Megha"); // using default values 
 
   const [form, setForm] = useState({
     email: "",
