@@ -21,9 +21,9 @@ body {
 }
 
 /* .button{
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  place-items: center;
+  align-items: center; // Controls how child items are aligned on the cross axis. Used with flex
+  justify-content: center; // Controls how child items are aligned on the main axis. Used with flex
+  align-content: center; // Controls how lines are aligned in a multi-line flex container. Used with flex
+  text-align: center; // Controls how inline content is aligned within a block-level element. Used with block
+  place-items: center; // Controls how child items are aligned on both the main and cross axes. Used with grid
 } */
