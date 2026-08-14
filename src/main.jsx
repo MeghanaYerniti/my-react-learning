@@ -9,21 +9,21 @@ import Profile from "./component/Profile.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
+    element: <><NavBar /><Home /></>
   },
   {
     path: "/about",
-    element: <About />
+    element: <><NavBar /><About /></>
   },
   {
     path: "/profile",
-    element: <Profile />
+    element: <><NavBar /><Profile /></>
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <NavBar />
+    {/* <NavBar /> */}
     <RouterProvider router={router} />
   </StrictMode>,
 )
