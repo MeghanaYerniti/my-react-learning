@@ -5,6 +5,7 @@ import NavBar from "./component/NavBar.jsx";
 import Home from "./component/Home.jsx";
 import About from "./component/About.jsx";
 import Profile from "./component/Profile.jsx";
+import User from "./component/User.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/profile",
     element: <><NavBar /><Profile /></>
+  },
+  {
+    path: "/user/:username",
+    element: <><NavBar /><User /></>
   },
 ]);
 
