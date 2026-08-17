@@ -1,10 +1,11 @@
 import React from "react";
 
-function Component1() {
+function Component1({count}) {
   return (
-    <div>
+    <>
       <h1>Heading from Component 1</h1>
-    </div>
+      <p> Count: {count} </p>
+    </>
   );
 }
 
