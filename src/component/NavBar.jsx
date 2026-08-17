@@ -1,13 +1,13 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div>
       <nav>
-        <Link to="/">Home</Link> <br />
-        <Link to="/about">About</Link> <br />
-        <Link to="/profile">Profile</Link> <br />
+        <NavLink className={(e) =>{return e.isActive? "red" : ""}} to="/">Home</NavLink> <br />
+        <NavLink className={(e) =>{return e.isActive? "red" : ""}} to="/about">About</NavLink> <br />
+        <NavLink className={(e) =>{return e.isActive? "red" : ""}} to="/profile">Profile</NavLink> <br />
       </nav>
     </div>
   );

@@ -3,7 +3,7 @@ import { useState } from "react";;
 // import C1Child from './component/C1Child.jsx'
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
   const [name, setName] = useState("Megha"); // using default values 
 
   const [form, setForm] = useState({
