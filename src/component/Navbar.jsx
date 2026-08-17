@@ -1,10 +1,10 @@
 import React from 'react'
 import Button from './Button1.jsx'
 
-const Navbar = ({count}) => {
+const Navbar = () => {
   return (
     <>
-    <span><Button count={count}/> This is navbar</span>
+    <span><Button /> This is navbar</span>
     </>
   )
 };
