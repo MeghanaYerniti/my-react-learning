@@ -8,4 +8,4 @@ const Navbar = ({adjective})=> {
     )
 };
 
-export default Navbar;
+export default memo(Navbar);
