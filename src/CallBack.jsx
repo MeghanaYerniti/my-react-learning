@@ -1,16 +1,16 @@
 import React from "react";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import Navbar from "./component/Navbar";
 
 
 
-const UseMemoHook = () => {
+const CallbackHook = () => {
   const [adjective, setAdjective] = useState("good")
   const [count, setCount] = useState(0)
 
-  const getAdjective = () => {  // here in this will be treated as new and render the child element even if value is same so we will use callacks
+  const getAdjective = useCallback(() => {
     return "another"
-  }
+  }, []) // callback - will store the value even when state changes.
 
   console.log("Main")
   return(
@@ -21,4 +21,4 @@ const UseMemoHook = () => {
   )
 };
 
-export default UseMemoHook;
+export default CallbackHook;
