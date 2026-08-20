@@ -1,7 +1,7 @@
 import React from "react";
 import { memo } from "react";
 
-const Navbar = ({adjective, getAdjective})=> {
+const Navbar = ({count, adjective, getAdjective})=> {
     console.log("Navbar")
     return(
         <div>
