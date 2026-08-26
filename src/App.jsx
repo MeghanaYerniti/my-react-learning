@@ -6,10 +6,21 @@ function App() {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data)
+  const delay = (d) => {
+    return new Promise((resolve, reject)=>{
+      setTimeout(()=>{
+        resolve()
+      }, d * 1000);
+    })
+  }
+
+  const onSubmit = async (data) => {
+    await delay(2) // simulating network delay
+    console.log(data)
+  }
 
   return (
     <>
@@ -22,7 +33,7 @@ function App() {
            {/* specific error message */}
           <input placeholder="password" {...register("password", {required: {value: true, message: "Password is required"}, minLength: {value: 6, message: "Min length is 6"}, maxLength: {value: 12, message: "Min length is 12"}})}/><br />
           {errors.password && <div>{errors.password.message}</div>}
-          <input type="submit" value="Submit" />
+          <input disabled={isSubmitting} type="submit" value="Submit" /> // disabling the button until sumbission is done
         </form>
       </div>
     </>
