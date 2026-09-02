@@ -1,12 +1,14 @@
-// import React from "react";
+import React from "react";
 
-// function postcard({key, title, body }) {
-//     console.log("data at postcard:", key, title, body);
-//     console.log(key, title, body);
-//     return(
-//         <>
-//             <p>{key}</p><h1>{title}</h1>
-//             <p>{body}</p>
-//         </>
-//     )
-// }
+function Postcard({id, title, body }) {
+    console.log("data at postcard:", id);
+    return(
+        <>
+            <p>id: {id}</p>
+            <h1>title: {title}</h1>
+            <p>body: {body}</p>
+        </>
+    )
+}
+
+export default Postcard;
