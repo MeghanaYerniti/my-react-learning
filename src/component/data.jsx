@@ -1,7 +1,10 @@
-const getData = () => {
-    return fetch('https://jsonplaceholder.typicode.com/posts', {
+const getData = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'GET',
-    }).then((response) => response.json());
+    });
+    // .then((response) => response.json());
+
+    return await response.json();
 }
 
 export default getData;
