@@ -1,8 +1,7 @@
 const getData = () => {
-    const response = fetch('https://jsonplaceholder.typicode.com/posts', {
+    return fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'GET',
-    });
-    return response;
+    }).then((response) => response.json());
 }
 
 export default getData;
